@@ -108,12 +108,12 @@ const HireMe = () => {
               <div className="flex flex-col gap-8">
                 <div className="group flex flex-col items-start cursor-pointer" onClick={() => copyToClipboard('kishansadeesh13@gmail.com')}>
                   <span className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2 flex items-center gap-2">Email <Copy size={12}/></span>
-                  <span className="text-2xl md:text-3xl font-medium group-hover:text-[var(--color-accent)] transition-colors">kishansadeesh13@gmail.com</span>
+                  <span className="text-2xl md:text-3xl font-medium transition-colors">kishansadeesh13@gmail.com</span>
                 </div>
                 
                 <div className="group flex flex-col items-start cursor-pointer" onClick={() => copyToClipboard('+91 9047478386')}>
                   <span className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2 flex items-center gap-2">Phone <Copy size={12}/></span>
-                  <span className="text-2xl md:text-3xl font-medium group-hover:text-[var(--color-accent)] transition-colors">+91 9047478386</span>
+                  <span className="text-2xl md:text-3xl font-medium transition-colors">+91 9047478386</span>
                 </div>
               </div>
             </div>

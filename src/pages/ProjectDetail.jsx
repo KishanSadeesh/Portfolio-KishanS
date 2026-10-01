@@ -126,7 +126,7 @@ const ProjectDetail = () => {
             {prevProject && (
               <Link to={`/portfolio/${prevProject.slug}`} className="group flex flex-col items-start">
                 <span className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Previous</span>
-                <span className="text-xl font-bold group-hover:text-[var(--color-accent)] transition-colors">{prevProject.title}</span>
+                <span className="text-xl font-bold transition-colors">{prevProject.title}</span>
               </Link>
             )}
           </div>
@@ -141,7 +141,7 @@ const ProjectDetail = () => {
              {nextProject && (
               <Link to={`/portfolio/${nextProject.slug}`} className="group flex flex-col items-end">
                 <span className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Next</span>
-                <span className="text-xl font-bold group-hover:text-[var(--color-accent)] transition-colors">{nextProject.title}</span>
+                <span className="text-xl font-bold transition-colors">{nextProject.title}</span>
               </Link>
             )}
           </div>

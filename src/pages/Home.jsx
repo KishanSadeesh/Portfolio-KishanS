@@ -134,7 +134,7 @@ const Home = () => {
                     </div>
                     
                     <div className="mt-6 px-4 pb-4 flex-1 flex flex-col">
-                      <p className="text-xl font-medium leading-tight text-white transition-colors group-hover:text-[var(--color-accent)]">{proj.caption}</p>
+                      <p className="text-xl font-medium leading-tight text-white transition-colors">{proj.caption}</p>
                       <div className="mt-auto pt-6 flex flex-wrap gap-2">
                         {proj.stack.slice(0,3).map((tag, i) => (
                           <span key={i} className="text-[10px] uppercase tracking-widest text-[var(--color-muted)] px-3 py-1.5 rounded-full border border-white/10 bg-white/5">{tag}</span>
@@ -199,7 +199,7 @@ const Home = () => {
                 <h3 className="text-xl font-bold text-white mb-3 leading-tight">{item.title}</h3>
                 <p className="text-sm text-[var(--color-muted)] mb-6 flex-1 leading-relaxed">{item.caption}</p>
                 {item.links?.github && (
-                  <a href={item.links.github} target="_blank" rel="noreferrer" className="text-xs uppercase tracking-widest font-bold text-white hover:text-[var(--color-accent)] transition-colors flex items-center gap-2 mt-auto">
+                  <a href={item.links.github} target="_blank" rel="noreferrer" className="text-xs uppercase tracking-widest font-bold text-white hover:text-white/80 transition-colors flex items-center gap-2 mt-auto">
                     View <span className="text-[var(--color-accent)] font-serif text-lg leading-none">→</span>
                   </a>
                 )}

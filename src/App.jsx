@@ -4,7 +4,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { AnimatePresence } from 'framer-motion';
 
 import Navbar from './components/Navbar';
-import CursorShadow from './components/CursorShadow';
 import GoToTop from './components/GoToTop';
 import Home from './pages/Home';
 import ProjectDetail from './pages/ProjectDetail';
@@ -42,7 +41,6 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen font-sans selection:bg-[var(--color-accent)] selection:text-white">
-          <CursorShadow />
           <ScrollToTop />
           <Navbar />
           <GoToTop />
