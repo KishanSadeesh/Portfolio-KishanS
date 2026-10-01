@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+@import "@fontsource/geist-sans/700.css";
+
+@theme {
+  --font-sans: "Geist Sans", sans-serif;
+  --color-bg: #030303;
+  --color-surface: rgba(255, 255, 255, 0.02);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #ffffff;
+  --color-muted: rgba(255, 255, 255, 0.55);
+  --color-accent: #ff1a1a;
+  --animate-marquee: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+:root {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.glass-panel {
+  background-color: var(--color-surface);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
+}
+
+.pill-hover {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pill-hover:hover {
+  transform: translateY(-4px);
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.4);
+}
+
+.input-focus {
+  transition: border-color 0.3s ease;
+}
+
+.input-focus:focus {
+  border-bottom-color: red;
+  outline: none;
+}
+
+/* Page transitions fade */
+.page-fade-enter { opacity: 0; }
+.page-fade-enter-active { opacity: 1; transition: opacity 250ms ease-in; }
+.page-fade-exit { opacity: 1; }
+.page-fade-exit-active { opacity: 0; transition: opacity 250ms ease-out; }
