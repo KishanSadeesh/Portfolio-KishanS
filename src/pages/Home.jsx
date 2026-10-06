@@ -154,8 +154,8 @@ const Home = () => {
       <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto border-t border-[var(--color-border)]">
         <h2 className="text-sm tracking-[0.15em] text-[var(--color-muted)] uppercase mb-12 text-center">02 / Patents</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="group block h-full flex flex-col p-2 rounded-[2rem] bg-white/5 border border-white/10 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-2">
+        <div className="flex flex-row overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-6 pb-8 hide-scrollbar scroll-smooth">
+          <div className="w-[85vw] sm:w-[60vw] md:w-auto shrink-0 snap-center md:snap-align-none group block h-full flex flex-col p-2 rounded-[2rem] bg-white/5 border border-white/10 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-2">
             <div className="aspect-[4/3] bg-[var(--color-bg)] rounded-[calc(2rem-8px)] overflow-hidden relative flex items-center justify-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] text-center">
                <img src={patentSafetyImg} alt="AI Wearable Safety" className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105" />
                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-700 pointer-events-none" />
@@ -166,7 +166,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="group block h-full flex flex-col p-2 rounded-[2rem] bg-white/5 border border-white/10 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-2">
+          <div className="w-[85vw] sm:w-[60vw] md:w-auto shrink-0 snap-center md:snap-align-none group block h-full flex flex-col p-2 rounded-[2rem] bg-white/5 border border-white/10 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-2">
             <div className="aspect-[4/3] bg-[var(--color-bg)] rounded-[calc(2rem-8px)] overflow-hidden relative flex items-center justify-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] text-center">
                <img src={patentHealthImg} alt="Health Monitoring" className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105" />
                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-700 pointer-events-none" />
@@ -177,7 +177,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="group block h-full flex flex-col p-2 rounded-[2rem] bg-white/5 border border-white/10 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-2">
+          <div className="w-[85vw] sm:w-[60vw] md:w-auto shrink-0 snap-center md:snap-align-none group block h-full flex flex-col p-2 rounded-[2rem] bg-white/5 border border-white/10 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-2">
             <div className="aspect-[4/3] bg-[var(--color-bg)] rounded-[calc(2rem-8px)] overflow-hidden relative flex items-center justify-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] text-center">
                <img src={patentRoadImg} alt="Road Degradation" className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105" />
                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-700 pointer-events-none" />
@@ -194,9 +194,9 @@ const Home = () => {
       <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto border-t border-[var(--color-border)]">
         <h2 className="text-sm tracking-[0.15em] text-[var(--color-muted)] uppercase mb-12 text-center">03 / Extra Highlights</h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="flex flex-row overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-2 gap-6 pb-8 hide-scrollbar scroll-smooth">
           {experienceList.map((item, idx) => (
-            <div key={idx} className="group block h-full flex flex-col p-8 rounded-[2rem] bg-[var(--color-surface)] border border-[var(--color-border)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:bg-white/5">
+            <div key={idx} className="w-[85vw] sm:w-auto shrink-0 snap-center sm:snap-align-none group block h-full flex flex-col p-8 rounded-[2rem] bg-[var(--color-surface)] border border-[var(--color-border)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:bg-white/5">
                 <h3 className="text-xl font-bold text-white mb-3 leading-tight">{item.title}</h3>
                 <p className="text-sm text-[var(--color-muted)] mb-6 flex-1 leading-relaxed">{item.caption}</p>
                 {item.links?.github && (
@@ -213,9 +213,9 @@ const Home = () => {
       <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto border-t border-[var(--color-border)]">
         <h2 className="text-sm tracking-[0.15em] text-[var(--color-muted)] uppercase mb-12 text-center">04 / Certifications & Achievements</h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="flex flex-row overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-2 gap-6 pb-8 hide-scrollbar scroll-smooth">
           {certsList.map((item, idx) => (
-            <div key={idx} className="group block h-full flex flex-col p-8 rounded-[2rem] bg-[var(--color-surface)] border border-[var(--color-border)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:bg-white/5">
+            <div key={idx} className="w-[85vw] sm:w-auto shrink-0 snap-center sm:snap-align-none group block h-full flex flex-col p-8 rounded-[2rem] bg-[var(--color-surface)] border border-[var(--color-border)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:bg-white/5">
                 <h3 className="text-xl font-bold text-white mb-3 leading-tight">{item.title}</h3>
                 <p className="text-sm text-[var(--color-muted)] flex-1 leading-relaxed">{item.caption}</p>
             </div>

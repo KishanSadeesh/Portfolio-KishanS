@@ -39,15 +39,18 @@ const Navbar = () => {
     }
   };
 
-  const NavItem = ({ item }) => {
+  const NavItem = ({ item, isMobile }) => {
     const isHash = item.path.startsWith('/#');
     const isActive = location.pathname === item.path || (isHash && location.hash === item.path.substring(1));
+    const textClass = isMobile 
+      ? 'text-lg md:text-xl tracking-[0.2em] font-medium hover:scale-110 hover:tracking-[0.25em]' 
+      : 'text-[10px] md:text-xs tracking-[0.1em]';
     
     return isHash ? (
       <a 
         href={item.path}
         onClick={(e) => handleNavClick(e, item.path)}
-        className={`inline-block px-3 py-2 text-[10px] md:text-xs tracking-[0.1em] uppercase transition-colors ${isActive ? 'text-[var(--color-accent)] font-bold' : 'text-[var(--color-muted)] hover:text-white'}`}
+        className={`inline-block px-3 py-2 uppercase transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${textClass} ${isActive ? 'text-[var(--color-accent)] font-bold' : 'text-[var(--color-muted)] hover:text-white'}`}
       >
         {item.name}
       </a>
@@ -55,7 +58,7 @@ const Navbar = () => {
       <NavLink 
         to={item.path} 
         onClick={(e) => handleNavClick(e, item.path)}
-        className={({ isActive }) => `inline-block px-3 py-2 text-[10px] md:text-xs tracking-[0.1em] uppercase transition-colors ${isActive ? 'text-[var(--color-accent)] font-bold' : 'text-[var(--color-muted)] hover:text-white'}`}
+        className={({ isActive }) => `inline-block px-3 py-2 uppercase transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${textClass} ${isActive ? 'text-[var(--color-accent)] font-bold' : 'text-[var(--color-muted)] hover:text-white'}`}
       >
         {item.name}
       </NavLink>
@@ -72,7 +75,7 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8 items-center">
           {navLinks.map((item) => (
-            <NavItem key={item.name} item={item} />
+            <NavItem key={item.name} item={item} isMobile={false} />
           ))}
         </div>
 
@@ -83,10 +86,10 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 z-40 bg-[var(--color-bg)] flex flex-col justify-center items-center gap-8 transition-transform duration-300 ${mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+      <div className={`fixed inset-0 z-40 bg-[var(--color-bg)] flex flex-col justify-center items-center gap-10 transition-transform duration-300 ${mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
         {navLinks.map((item) => (
-          <div key={item.name} className="text-2xl" onClick={() => setMobileMenuOpen(false)}>
-             <NavItem item={item} />
+          <div key={item.name} onClick={() => setMobileMenuOpen(false)}>
+             <NavItem item={item} isMobile={true} />
           </div>
         ))}
       </div>
