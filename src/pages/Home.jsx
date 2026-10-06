@@ -102,7 +102,7 @@ const Home = () => {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={clsx(
-                  "relative text-sm md:text-base font-bold tracking-tight uppercase transition-all duration-300 text-left whitespace-nowrap px-4 py-3 rounded-xl w-full",
+                  "relative text-sm md:text-base font-bold tracking-tight uppercase transition-all duration-300 text-left whitespace-nowrap px-4 py-3 rounded-xl w-auto flex-shrink-0 lg:w-full",
                   activeTab === tab ? "bg-[var(--color-accent)] text-white" : "text-[var(--color-muted)] hover:bg-white/5 hover:text-white"
                 )}
               >

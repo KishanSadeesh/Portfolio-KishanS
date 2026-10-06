@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-max max-w-[90vw] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] px-8 py-3.5 flex justify-between items-center gap-8 md:gap-16 rounded-full border ${scrolled || mobileMenuOpen ? 'bg-black/40 backdrop-blur-2xl border-white/10 shadow-2xl' : 'bg-transparent border-transparent'}`}>
+      <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90vw] md:w-max max-w-[90vw] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] px-5 md:px-8 py-3.5 flex justify-between items-center gap-4 md:gap-16 rounded-full border ${scrolled || mobileMenuOpen ? 'bg-black/40 backdrop-blur-2xl border-white/10 shadow-2xl' : 'bg-transparent border-transparent'}`}>
         <Link to="/" className="text-white font-bold tracking-[0.2em] uppercase text-xs md:text-sm">
           Kishan S.
         </Link>

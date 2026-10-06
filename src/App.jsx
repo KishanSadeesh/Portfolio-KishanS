@@ -40,7 +40,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen font-sans selection:bg-[var(--color-accent)] selection:text-white">
+        <div className="bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen font-sans selection:bg-[var(--color-accent)] selection:text-white overflow-x-hidden">
           <ScrollToTop />
           <Navbar />
           <GoToTop />

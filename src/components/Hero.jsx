@@ -165,7 +165,7 @@ const Hero = () => {
               }`}
             >
               <div className="max-w-3xl text-left pointer-events-auto">
-                <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tighter whitespace-pre-line drop-shadow-lg">
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] tracking-tighter whitespace-pre-line drop-shadow-lg">
                   {state.title}
                 </h1>
               </div>
