@@ -27,9 +27,10 @@
   scroll-behavior: smooth;
 }
 
-body {
+body, html {
   background-color: var(--color-bg);
   color: var(--color-text);
+  overflow-x: clip;
 }
 
 .glass-panel {

@@ -96,13 +96,13 @@ const Home = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Unique Text-Based Filters (Sidebar) */}
-          <div className="lg:col-span-3 flex flex-row overflow-x-auto lg:flex-col gap-2 lg:gap-4 items-start no-scrollbar pb-6 lg:pb-0">
+          <div className="lg:col-span-3 flex flex-row flex-wrap lg:flex-col gap-2 lg:gap-4 items-start pb-6 lg:pb-0">
             {TABS.map(tab => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={clsx(
-                  "relative text-sm md:text-base font-bold tracking-tight uppercase transition-all duration-300 text-left whitespace-nowrap px-4 py-3 rounded-xl w-auto flex-shrink-0 lg:w-full",
+                  "relative text-sm md:text-base font-bold tracking-tight uppercase transition-all duration-300 text-left px-4 py-3 rounded-xl",
                   activeTab === tab ? "bg-[var(--color-accent)] text-white" : "text-[var(--color-muted)] hover:bg-white/5 hover:text-white"
                 )}
               >

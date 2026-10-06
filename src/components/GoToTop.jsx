@@ -37,7 +37,7 @@ const GoToTop = () => {
         >
           <button
             onClick={scrollToTop}
-            className="flex items-center justify-start w-16 p-4 bg-[var(--color-accent)] text-white rounded-l-full shadow-[-5px_0_20px_rgba(255,0,0,0.3)] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] translate-x-[70%] hover:translate-x-0 group"
+            className="flex items-center justify-start w-16 p-4 bg-[var(--color-accent)] text-white rounded-l-full shadow-[-5px_0_20px_rgba(255,0,0,0.3)] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] translate-x-0 md:translate-x-[70%] md:hover:translate-x-0 group"
             aria-label="Go to top"
           >
             <ArrowUp size={24} className="min-w-[24px] group-hover:-translate-y-1 transition-transform" />
