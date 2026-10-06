@@ -5,17 +5,25 @@ import { ArrowUp } from 'lucide-react';
 const GoToTop = () => {
   const [show, setShow] = useState(false);
 
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShow(true);
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY < lastScrollY) {
+        setShow(false); // Hide when scrolling up
+      } else if (currentScrollY > 300) {
+        setShow(true); // Show when scrolling down and past 300px
       } else {
         setShow(false);
       }
+      
+      setLastScrollY(currentScrollY);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const scrollToTop = () => {
     const el = document.getElementById('skills');

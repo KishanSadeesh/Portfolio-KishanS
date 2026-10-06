@@ -96,14 +96,14 @@ const Home = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Unique Text-Based Filters (Sidebar) */}
-          <div className="lg:col-span-3 flex flex-row flex-wrap lg:flex-col gap-2 lg:gap-4 items-start pb-6 lg:pb-0">
+          <div className="lg:col-span-3 flex flex-row overflow-x-auto snap-x lg:flex-col gap-3 lg:gap-4 items-start pb-6 lg:pb-0 hide-scrollbar scroll-smooth">
             {TABS.map(tab => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={clsx(
-                  "relative text-sm md:text-base font-bold tracking-tight uppercase transition-all duration-300 text-left px-4 py-3 rounded-xl",
-                  activeTab === tab ? "bg-[var(--color-accent)] text-white" : "text-[var(--color-muted)] hover:bg-white/5 hover:text-white"
+                  "relative text-sm md:text-base font-bold tracking-tight uppercase transition-all duration-300 text-left px-5 py-3 rounded-xl whitespace-nowrap snap-start shrink-0 border border-transparent",
+                  activeTab === tab ? "bg-[var(--color-accent)] text-white" : "text-[var(--color-muted)] bg-white/5 border-white/10 hover:bg-white/10 hover:text-white"
                 )}
               >
                 {tab}
@@ -111,8 +111,8 @@ const Home = () => {
             ))}
           </div>
 
-          {/* Grid */}
-          <motion.div layout className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Grid / Horizontal Scroll */}
+          <motion.div layout className="lg:col-span-9 flex flex-row overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 gap-6 pb-8 hide-scrollbar scroll-smooth">
             <AnimatePresence>
               {filteredProjects.map((proj) => (
                 <motion.div
@@ -122,6 +122,7 @@ const Home = () => {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.2 }}
                   key={proj.slug}
+                  className="w-[85vw] sm:w-[60vw] md:w-auto shrink-0 snap-center md:snap-align-none"
                 >
                   <Link to={`/portfolio/${proj.slug}`} className="group block h-full flex flex-col p-2 rounded-[2rem] bg-white/5 border border-white/10 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-2 focus-visible:outline focus-visible:outline-[var(--color-accent)] focus-visible:outline-4">
                     <div className="aspect-[16/9] sm:aspect-[21/9] bg-[var(--color-bg)] rounded-[calc(2rem-8px)] overflow-hidden relative flex items-center justify-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]">
